@@ -32,33 +32,19 @@ class parking_garage:
                     print('Your ticket has been paid. You have 15 minutes to leave, or we will have to use excessive force')
             else:
                 print('The ticket has been paid')
-                
-                print('Thank You, Have a Nice Day')
-                del self
+        else:  
+            print('wrong ticket number')
+
+def Leave_garage(self):
+     ticket = int(input("We need your ticket number to exit: "))
+     if ticket in self.current_ticket:
+          if self.current_ticket[ticket]['paid']:
+               print("Thank you, have a wonderful day. ")
+               del self.current_ticket[ticket]
+               self.tickets.append(ticket)
+               self.parking_spaces.append(ticket)
+     else:
+          print("Wrong ticket number! I'll wait.....")
 
 
-        payment = int(input('please enter your payment:'))
-        if payment>= 0:
-            print('your ticket has been paid. You have 15 minutes to leave, or we will have to use excessive force')
-        else:
-            print('The ticket has been paid')
-
-
-        self.parking_spaces = 'avaiable_space'
-
-    def take_ticket(self):
-
-
-        if self.current_ticket == {'space': 'paid': False}
-            print(f' your ticket number is tick')
-        else:
-            print('sorry, garage is full')
-    
-
-
-    def take_ticket():
-        pass
-    def pay_for_parking():
-        pass
-    def leave_garage():
-        pass
+       
