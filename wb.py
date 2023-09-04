@@ -49,4 +49,6 @@ class parking_garage:
     
 
 
-       
+    def fake(fuction):
+        not_real == fake
+        return (not real)
