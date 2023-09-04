@@ -35,16 +35,18 @@ class parking_garage:
         else:  
             print('wrong ticket number')
 
-def Leave_garage(self):
-     ticket = int(input("We need your ticket number to exit: "))
-     if ticket in self.current_ticket:
-          if self.current_ticket[ticket]['paid']:
-               print("Thank you, have a wonderful day. ")
-               del self.current_ticket[ticket]
-               self.tickets.append(ticket)
-               self.parking_spaces.append(ticket)
-     else:
-          print("Wrong ticket number! I'll wait.....")
+    def Leave_garage(self):
+        ticket = int(input("We need your ticket number to exit: "))
+        if ticket in self.current_ticket:
+                if self.current_ticket[ticket]['paid']:
+                   print("Thank you, have a wonderful day. ")
+                   del self.current_ticket[ticket]
+                   self.tickets.append(ticket)
+                   self.parking_spaces.append(ticket)
+        else:
+            print("Wrong ticket number! I'll wait.....")
+
+    
 
 
        
