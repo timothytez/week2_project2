@@ -5,6 +5,10 @@
 #when leaving the garge, if ticket is paid  'thank you, have a nice day'. if not prompt for payment
 #once paid update spaces and ticket lists to increase by 1.
 
+tickets = ()
+parking_spaces = ()
+current_ticket = {}
+
 class parking_garage:
     def __init__(self, total_tickets, total_spaces):
         self.ticket = [i for i in range(1, total_tickets +1)]
@@ -15,6 +19,7 @@ class parking_garage:
         if len(self.tickets) >0 and len(self.parking_spaces) > 0:
             ticket = self.ticket.pop(0)
             space = self.parking_spaces.pop(0)
+            self.current_ticket[ticket] = {'paid': False, 'space': space}
 
             print(f'your number is {ticket} and your parking space is {space}')
         
@@ -45,6 +50,29 @@ class parking_garage:
                    self.parking_spaces.append(ticket)
         else:
             print("Wrong ticket number! I'll wait.....")
+
+    def driver(self, num_iterations=5):
+        for _ in range(num_iterations):
+            print("\nNew User:")
+            self.Take_ticket()
+            self.Pay_for_parking()
+            self.Leave_garage()
+garage = ParkingGarage()
+garage.Take_ticket()
+garage.Pay_for_parking()
+garage.Leave_garage()
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
