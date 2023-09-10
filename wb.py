@@ -57,7 +57,7 @@ class parking_garage:
             self.Take_ticket()
             self.Pay_for_parking()
             self.Leave_garage()
-garage = ParkingGarage()
+garage = parking_garage()
 garage.Take_ticket()
 garage.Pay_for_parking()
 garage.Leave_garage()
